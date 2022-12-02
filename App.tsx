@@ -1,20 +1,19 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
+import { Main } from './src/screens/Main';
 
 export default function App() {
+
+  const [isFontsLoaded] = useFonts({
+    'Qatar-400': require('./src/assets/fonts/GraphikArabicMedium.otf'),
+    'Qatar-500': require('./src/assets/fonts/Qatar2022Arabic-Bold.ttf'),
+    'Qatar-600': require('./src/assets/fonts/Qatar2022Arabic-Heavy.ttf')
+  })
+
+  if (!isFontsLoaded) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <Main />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
