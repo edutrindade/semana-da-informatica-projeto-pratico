@@ -13,3 +13,17 @@ export const CountriesContainer = styled.View`
     height: 73px;
     margin-top: 34px;
 `;
+
+export const SquadContainer = styled.View`
+    flex: 1;
+    padding-bottom: 30px;
+`;
+
+export const Footer = styled.View`
+    min-height: 110px;
+`;
+
+export const FooterContainer = styled.View`
+    margin-left: 24px;
+    margin-right: 24px;
+`;
