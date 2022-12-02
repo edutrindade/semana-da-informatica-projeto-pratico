@@ -7,21 +7,22 @@ import { Container, CountriesContainer, Footer, FooterContainer, SquadContainer 
 import { countries } from '../../mocks/countries';
 import { Button } from '../../components/Button';
 import { Alert } from 'react-native';
+import { Squad } from '../../components/Squad';
 
 export function Main() {
     const [selectedCountry, setSelectedCountry] = useState(countries[0]._id);
-
+    const [selectedGroup, setSelectedGroup] = useState('G');
 
     return (
         <Container>
-            <Header />
+            <Header selectedGroup={selectedGroup} />
 
             <CountriesContainer>
-                <Countries country={selectedCountry} />
+                <Countries country={selectedCountry} selectedGroup={selectedGroup} />
             </CountriesContainer>
 
             <SquadContainer>
-
+                <Squad selectedCountry={selectedCountry} selectedGroup={selectedGroup} />
             </SquadContainer>
 
             <Footer>

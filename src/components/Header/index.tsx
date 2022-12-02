@@ -2,7 +2,12 @@ import { Text } from '../Text';
 
 import { Container, Content, AsideLeft, AsideRight } from './styles';
 
-export function Header() {
+interface HeaderProps {
+    selectedGroup: string;
+};
+
+
+export function Header({ selectedGroup }: HeaderProps) {
 
     return (
         <Container>
@@ -13,7 +18,7 @@ export function Header() {
                 </AsideLeft>
 
                 <AsideRight>
-                    <Text color="#6B0524" >Grupo G</Text>
+                    <Text color="#6B0524" >Grupo {selectedGroup}</Text>
                 </AsideRight>
             </Content>
         </Container>

@@ -20,7 +20,7 @@ export const SquadContainer = styled.View`
 `;
 
 export const Footer = styled.View`
-    min-height: 110px;
+    min-height: 80px;
 `;
 
 export const FooterContainer = styled.View`

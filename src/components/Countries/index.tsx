@@ -4,9 +4,10 @@ import { countries } from "../../mocks/countries";
 
 interface CountriesProps {
     country: string;
+    selectedGroup: string;
 };
 
-export function Countries({ country }: CountriesProps) {
+export function Countries({ country, selectedGroup }: CountriesProps) {
 
     return (
         <Container>
